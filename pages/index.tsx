@@ -265,6 +265,10 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/wailuen/">
             Powered by IMC Bot. Demo adpated by wailuen.
           </a>
+          <>
+            Trained with IMC Group IT and Fraud Risk Management Policy, Employee
+            handbook and Admin house rules.
+          </>
         </footer>
       </Layout>
     </>
