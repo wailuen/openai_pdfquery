@@ -68,9 +68,8 @@ export default function Home() {
 
     setLoading(true);
     setQuery('');
-
+    console.log('index:trying to ask question', question);
     try {
-      console.log('trying to ask question', question);
       // console.log('history', history);
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -82,6 +81,7 @@ export default function Home() {
           history,
         }),
       });
+
       const data = await response.json();
       console.log('data', data);
 
