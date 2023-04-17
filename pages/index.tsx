@@ -70,8 +70,8 @@ export default function Home() {
     setQuery('');
 
     try {
-      console.log('question', question);
-      console.log('history', history);
+      console.log('trying to ask question', question);
+      // console.log('history', history);
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
@@ -101,7 +101,7 @@ export default function Home() {
           history: [...state.history, [question, data.text]],
         }));
       }
-      console.log('messageState', messageState);
+      console.log('index:messageState', messageState);
 
       setLoading(false);
 
@@ -109,7 +109,7 @@ export default function Home() {
       messageListRef.current?.scrollTo(0, messageListRef.current.scrollHeight);
     } catch (error) {
       setLoading(false);
-      console.log('??error', error);
+      console.log('index:error', error);
       setError('An error occurred while fetching the data. Please try again.');
     }
   }
