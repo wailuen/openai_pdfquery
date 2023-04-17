@@ -225,7 +225,7 @@ export default function Home() {
                     placeholder={
                       loading
                         ? 'Waiting for response...'
-                        : 'What is this policy bot about?'
+                        : 'Do ask me about IMC policy...'
                     }
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
