@@ -106,7 +106,10 @@ export default function Home() {
       setLoading(false);
 
       //scroll to bottom
-      messageListRef.current?.scrollTo(0, messageListRef.current.scrollHeight);
+      messageListRef.current?.scrollTo(
+        0,
+        messageListRef.current.scrollHeight + 100,
+      );
     } catch (error) {
       setLoading(false);
       console.log('index:error', error);
@@ -177,7 +180,7 @@ export default function Home() {
                           </ReactMarkdown>
                         </div>
                       </div>
-                      {message.sourceDocs && (
+                      {/* {message.sourceDocs && (
                         <div
                           className="p-5"
                           key={`sourceDocsAccordion-${index}`}
@@ -206,7 +209,7 @@ export default function Home() {
                             ))}
                           </Accordion>
                         </div>
-                      )}
+                      )} */}
                     </>
                   );
                 })}

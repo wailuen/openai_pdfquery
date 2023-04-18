@@ -1,0 +1,7 @@
+OPENAI_API_KEY='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'
+
+# Update these with your Supabase details from your project settings > API and dashboard settings
+
+PINECONE_ENVIRONMENT='asia-northeast1-gcp'
+PINECONE_INDEX_NAME='imc-policy'
+PINECONE_API_KEY='c3d9cc03-71e5-4202-a96d-1752f3eac37e'
