@@ -54,7 +54,7 @@ export default function Home() {
     }
 
     const question = query.trim();
-
+    messageListRef.current?.scrollTo(0, messageListRef.current.scrollHeight);
     setMessageState((state) => ({
       ...state,
       messages: [
@@ -106,10 +106,12 @@ export default function Home() {
       setLoading(false);
 
       //scroll to bottom
-      messageListRef.current?.scrollTo(
-        0,
-        messageListRef.current.scrollHeight + 100,
-      );
+      window.requestAnimationFrame(() => {
+        messageListRef.current?.scrollTo(
+          0,
+          messageListRef.current.scrollHeight,
+        );
+      });
     } catch (error) {
       setLoading(false);
       console.log('index:error', error);
