@@ -26,7 +26,7 @@ export default function Home() {
     messages: [
       {
         message:
-          'Hi, what would you like to learn about IMC policy and guideline?',
+          'I had read Group IT policy, Fraud risk management and Singapore employee handbook. What would you like to know about them? ',
         type: 'apiMessage',
       },
     ],
